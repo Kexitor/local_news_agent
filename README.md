@@ -18,11 +18,11 @@ crawl4ai-doctor
 
 2. Set in `config.py` all required paths and urls (you may use other openai-like APIs):
 ```python
-local_llm_url = "http://localhost:5000/v1" # local openai-like API path
+local_llm_url = "http://localhost:5000/v1" # local OpenAI-compatible API path
 
 local_llm_model = "openai/gpt-oss-20b" # local model used for agentic tasks
 
-local_llm_api_key = "123" # this key is ignored by most local servers (like Ollama or LM Studio), but a placeholder is required by the OpenAI-compatible client
+local_llm_api_key = "123" # this is a placeholder required by the OpenAI-compatible client
 
 base_news_url = "https://dzen.ru/news" # page url, where news comes from
 ```
@@ -37,12 +37,12 @@ python usage_sample.py
 
 
 ## Agent capabilities:
-1) Get news and summarize them.
+1) Get news and summarize it.
 2) Get source of news page content and give details about specific news.
 
 ### Personal test: 
 
-I tested this agent with gpt-oss-20b with low reasoning effort and qwen/qwen3-4b-2507 (LM Studio), and it produced high-quality summaries for my target news source.
+I tested this agent with gpt-oss-20b with low reasoning effort and qwen/qwen3-4b-2507 (LM Studio) with 32k context, and it produced high-quality summaries for my target news source.
 
 
 
