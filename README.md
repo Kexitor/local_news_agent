@@ -27,7 +27,7 @@ local_llm_api_key = "123" # this is a placeholder required by the OpenAI-compati
 base_news_url = "https://dzen.ru/news" # page url, where news comes from
 ```
 
-3. Turn on your Ollama server or LM Studio with correct server API and check is chosen mode is able to use tools.
+3. Turn on your Ollama server or LM Studio with correct server API and check if chosen model is able to use tools.
 
 
 4. Test agent work:
