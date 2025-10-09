@@ -4,7 +4,7 @@ This is a simple fully local news agent, which using [crawl4ai](https://github.c
 
 ## 🚀 Quick Start 
 
-1. Install all requirements:
+1. Install all requirements (I used python 3.11):
 ```bash
 # Install the package
 pip install -r requirements.txt
