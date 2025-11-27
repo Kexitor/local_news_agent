@@ -1,6 +1,6 @@
 # Fully Local News Agent
 
-This is a simple fully local news agent, which using [crawl4ai](https://github.com/unclecode/crawl4ai) and [pydantic-ai](https://github.com/pydantic/pydantic-ai) for getting page content and summarizing retrieved news. No external APIs are used—only a local LLM.
+This is a simple fully local news agent that uses [crawl4ai](https://github.com/unclecode/crawl4ai) and [pydantic-ai](https://github.com/pydantic/pydantic-ai) for getting page content and summarizing retrieved news. No external APIs are used—only a local LLM.
 
 ## 🚀 Quick Start 
 
@@ -36,16 +36,35 @@ python usage_sample.py
 ```
 
 
-## Agent capabilities:
+## 📋 Architecture
+
+This agent follows a modular architecture:
+- **Scrapper Tool**: Handles web scraping using crawl4ai
+- **News Agent**: Main agent logic that uses pydantic-ai with OpenAI-compatible LLM 
+- **Configuration**: Centralized configuration management
+- **Usage Sample**: Example implementation showing how to interact with the agent
+
+## 🧠 Agent Capabilities
 1) Get news and summarize it.
 2) Get source of news page content and give details about specific news.
 
-### Personal test: 
+## 🔧 Configuration Options
+
+- `local_llm_url`: URL of your local OpenAI-compatible API (e.g., Ollama or LM Studio)
+- `local_llm_model`: Name of the local model to use for agentic tasks  
+- `local_llm_api_key`: API key placeholder required by OpenAI-compatible client
+- `base_news_url`: Base URL from which news is scraped
+- `logs_path`: Path where log files will be stored
+- `news_agent_instruction`: Agent's instructions that define its behavior and response rules
+
+## 🧪 Testing
 
 I tested this agent with gpt-oss-20b with low reasoning effort and qwen/qwen3-4b-2507 (LM Studio) with 32k context, and it produced high-quality summaries for my target news source.
 
+## 🔍 Troubleshooting
 
-
-
-
-
+If you encounter issues:
+1. Ensure your local LLM server is running
+2. Verify that the model specified in `config.py` is available in your LLM server
+3. Check that crawl4ai is properly installed and configured
+4. Confirm that the base_news_url is accessible and returns valid content
